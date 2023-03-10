@@ -27,4 +27,4 @@ for elf in range(3):
     topThreeCalories += max(elves)
     elves.remove(max(elves))
 
-print("The total calories of the max 3 elves is ", topThreeCalories)
+print("The total calories of the top 3 elves is ", topThreeCalories)
