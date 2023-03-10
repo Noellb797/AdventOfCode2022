@@ -16,5 +16,16 @@ for line in input:
 
 input.close()
 
+# Part 1
 print("The max calories is ", max(elves))
 print("The elf with the most calories is elf ", elves.index(max(elves))+1)
+
+# Part 2
+topThreeCalories = 0
+
+for elf in range(3):
+    print(max(elves))
+    topThreeCalories += max(elves)
+    elves.remove(max(elves))
+
+print("The total calories of the max 3 elves is ", topThreeCalories)
