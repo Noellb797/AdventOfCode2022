@@ -1,3 +1,6 @@
+# Advent of Code 2022 Day 01
+# Baillie Noell
+# March 9th 2023
 
 calories = 0
 elves = []
