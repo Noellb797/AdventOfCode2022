@@ -5,7 +5,7 @@
 calories = 0
 elves = []
 
-input = open("Day01.txt", "r")
+input = open("Day01_Input.txt", "r")
 
 for line in input:
     if line.strip():
