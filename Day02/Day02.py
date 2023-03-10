@@ -39,4 +39,50 @@ for game in games:
 
 games.close()
 
-print("The total score is ", score)
+print("The total score for part 1 is ", score)
+
+
+# Part 2
+points = {
+    "X": 0,
+    "Y": 3,
+    "Z": 6,
+    "R": 1,
+    "P": 2,
+    "S": 3
+}
+
+ties = {
+    "A": "R",
+    "B": "P",
+    "C": "S" 
+}
+
+losses = {
+    "A": "S",
+    "B": "R",
+    "C": "P"
+}
+
+wins = {
+    "A": "P",
+    "B": "S",
+    "C": "R"
+}
+
+score = 0
+
+games = open("Day02_Input.txt")
+
+for game in games:
+    score += points[game[2]]
+    if game[2] == "X":
+        score += points[losses[game[0]]]
+    elif game[2] == "Y":
+        score += points[ties[game[0]]]
+    elif game[2] == "Z":
+        score += points[wins[game[0]]]
+
+games.close()
+
+print("The total score for part 2 is ", score)
