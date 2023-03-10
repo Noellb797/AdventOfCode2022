@@ -24,7 +24,6 @@ print("The elf with the most calories is elf ", elves.index(max(elves))+1)
 topThreeCalories = 0
 
 for elf in range(3):
-    print(max(elves))
     topThreeCalories += max(elves)
     elves.remove(max(elves))
 
