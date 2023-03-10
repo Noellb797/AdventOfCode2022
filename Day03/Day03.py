@@ -2,6 +2,7 @@
 # Baillie Noell
 # March 9th 2023
 
+from itertools import islice
 sum = 0
 priorities = "-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -26,4 +27,26 @@ for sack in rucksacks:
 
 rucksacks.close() 
 
-print("The sum of the priorities is ", sum)
+print("The sum of the part 1 priorities is ", sum)
+
+# Part 2
+sum = 0
+
+rucksacks = open("Day03_Input.txt")
+
+while True:
+    sack1 = rucksacks.readline().strip()
+    sack2 = rucksacks.readline().strip()
+    sack3 = rucksacks.readline().strip()
+
+    if not sack1:
+        break
+
+    for b in sack1:
+        if b in sack2 and b in sack3:
+            sum += priorities.find(b)
+            break
+
+rucksacks.close()
+
+print ("The sum of the part 2 priorities is ", sum)
